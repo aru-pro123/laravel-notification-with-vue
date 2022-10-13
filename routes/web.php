@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/app/notifications', 'NotificationController@index')->name('home');
+Route::post('/app/notifications/{id}/mark-as-read', 'NotificationController@markAsRead');
+Route::post('/app/notifications/mark-all-as-read', 'NotificationController@markAllAsRead');
+
+

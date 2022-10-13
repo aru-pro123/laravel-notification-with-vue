@@ -28,7 +28,9 @@
                     @endif
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="">notification</a>
+                        <span class="nav-link">
+                            <notification></notification>
+                        </span>
                     </li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -53,3 +55,9 @@
         </div>
     </div>
 </nav>
+
+@push('scripts')
+    <script>
+        window.asset_url = "{{ asset('/assets/images') }}";
+    </script>
+@endpush
